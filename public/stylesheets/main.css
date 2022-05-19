@@ -25,7 +25,7 @@
     margin: 30px;
 }
 
-.add-new-property-form {
+.add-new-property-form, .update-new-property-form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

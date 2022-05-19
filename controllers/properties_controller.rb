@@ -9,3 +9,7 @@ get '/properties/listings' do
   get '/properties/create' do
     erb :'/properties/create'
   end
+
+  get '/properties/update' do
+    erb :'/properties/update'
+  end
