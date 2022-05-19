@@ -11,3 +11,13 @@
 .home_page_header ul li {
     list-style: none;
 }
+
+.login-page-section {
+    text-align: center;
+    margin: 50px;
+}
+
+.login-page-section form div {
+  margin: 30px;
+}
+
