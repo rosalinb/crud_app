@@ -12,7 +12,7 @@
     list-style: none;
 }
 
-.login-page-section {
+.login-page-section, .signup-page-section {
     text-align: center;
     margin: 50px;
 }
@@ -21,3 +21,14 @@
   margin: 30px;
 }
 
+.signup-page-section form div{
+    margin: 30px;
+}
+
+.add-new-property-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+}
