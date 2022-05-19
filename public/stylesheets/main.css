@@ -1,0 +1,13 @@
+.home_page_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home_page_header ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.home_page_header ul li {
+    list-style: none;
+}
