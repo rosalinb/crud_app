@@ -2,7 +2,7 @@ get '/properties/listings' do
     erb :'/properties/listings'
   end
 
-  get '/agent-dashboard' do
+  get '/agent_dashboard' do
     erb :'/properties/agent_dashboard'
   end
 
