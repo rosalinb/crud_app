@@ -1,5 +1,8 @@
 <h1>Welcome <%= current_user['name'] %> </h1>
-<div><a href="/logout">logout</a></div>
+ <form action="/login_sessions" method="POST">
+    <input type="hidden" name="_method" value="delete">
+    <button>Logout</button>
+</form>
 <div><a href="/">HOME</a></div>
 
 <div><a href="/properties/create">ADD NEW PROPERTY</a></div>

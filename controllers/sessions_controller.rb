@@ -12,7 +12,7 @@ post '/login_sessions' do
         session['user_type'] = user['user_type']
 
         if session['user_type'] == 'agent'
-        redirect '/agent-dashboard'
+        redirect '/agent_dashboard'
         else
         redirect '/'
         end  
