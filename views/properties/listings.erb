@@ -1,9 +1,26 @@
 
-<h2>Real Estate & Property in Rhodes, NSW 2138
-</h2>
+<h2>Real Estate & Property in NSW 2138</h2>
 <button>Filter</button>
+<a href="/">HOME</a>
 
-<div style="width:200px;height:200px;background-color:red;margin:50px;"></div>
-<div style="width:200px;height:200px;background-color:red;margin:50px;"></div>
-<div style="width:200px;height:200px;background-color:red;margin:50px;"></div>
+
+<% property_listings.each do |property| %>
+    <div>
+    <img src="<%= property['image_url']%>" alt="" >
+    </div>
+
+    <div>
+    <h2><%= property['ad_line']%></h2>
+    <h3><%= property['house_number']%>  <%= property['street_name']%>,<%= property['city']%>,<%= property['state']%>, <%= property['postcode']%></h3>
+    <h3><%= property['number_of_bedrooms']%> Berdrooms, <%= property['number_of_bathrooms']%> Bath, <%= property['number_of_parkings']%> parking</h3>
+    <p>It's a beautiful<%= property['property_type']%></p>
+    <h4>Rent: <%= property['price']%></h4>
+    <h4>Contact: <%= property['created_by']%></h4>
+    <h4>Ph:<%= property['agent_contact']%></h4>
+    </div>
+
+<% end %>
+
+<%# <div style="width:200px;height:200px;background-color:red;margin:50px;"></div>
+<div style="width:200px;height:200px;background-color:red;margin:50px;"></div> %>
 
