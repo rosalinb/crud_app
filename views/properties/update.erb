@@ -1,24 +1,27 @@
 
 <h1>Hi! AGENTNAME</h1>
 <a href="/agent_dashboard">Return to my Dashboard</a>
-<div><a href="/logout">logout</a></div>
+<%# <div><a href="/logout">logout</a></div> %>
 
 <h2>Update details of the property in your list </h2>
 <section>
-    <form class="update-new-property-form" action="" method = "POST">
-        <input type="text" name="image_url" placeholder="Add an image of the property" value="">
-        <input type="text" name="street_number" placeholder="House/street_number">
-        <input type="text" name="street_name" placeholder="House/street name">
-        <input type="text" name="postcode" placeholder="Postcode">
-        <input type="text" name="city" placeholder="City">
-        <input type="text" name="state" placeholder="State">
-        <input type="text" name="country" placeholder="Country">
-        <input type="text" name="property_type" placeholder="Property type">
-        <input type="text" name="num_of_bedrooms" placeholder="Number of bedrooms">
-        <input type="text" name="num_of_bathrooms" placeholder="Number of baths">
-        <input type="text" name="num_of_parkings" placeholder="Number of parking available">
-        <input type="text" name="price" placeholder="Price per week or month in AUD">
+    <form class="update-new-property-form" action="/properties/<%= property['id']%>" method = "POST">
+         <input type="hidden" name="_method" value="put">
 
-        <button>Add property</button>
+        <input type="text" name="image_url" placeholder="Add an image of the property" value="<%= property['image_url']%>">
+        <input type="text" name="ad_line" placeholder="Advertise Title" value="<%= property['ad_line']%>">
+        <input type="text" name="street_number" placeholder="House/street_number" value="<%= property['street_number']%>">
+        <input type="text" name="street_name" placeholder="House/street name" value="<%= property['street_name']%>">
+        <input type="text" name="postcode" placeholder="Postcode" value="<%= property['postcode']%>">
+        <input type="text" name="suburb" placeholder="suburb" value="<%= property['suburb']%>">
+        <input type="text" name="state" placeholder="State" value="<%= property['state']%>">
+        <input type="text" name="property_type" placeholder="Property type" value="<%= property['property_type']%>">
+        <input type="text" name="num_of_bedrooms" placeholder="Number of bedrooms" value="<%= property['num_of_bedrooms']%>">
+        <input type="text" name="num_of_bathrooms" placeholder="Number of baths" value="<%= property['num_of_bathrooms']%>">
+        <input type="text" name="num_of_parkings" placeholder="Number of parking available" value="<%= property['num_of_parkings']%>">
+        <input type="text" name="price" placeholder="Price per week or month in AUD" value="<%= property['price']%>">
+    
+
+        <button>update property</button>
     </form>
 </section>

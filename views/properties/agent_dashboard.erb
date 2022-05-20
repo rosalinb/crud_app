@@ -1,9 +1,10 @@
-<h1>Welcome <%= current_user['name'] %></h1>
+<h1>Welcome <%= current_user['name']%></h1>
 
 <form action="/login_sessions" method="POST">
     <input type="hidden" name="_method" value="delete">
     <button>Logout</button>
 </form>
+
 <div><a href="/">HOME</a></div>
 
 <div><a href="/properties/create">ADD NEW PROPERTY</a></div>
@@ -19,30 +20,17 @@
     <h3><%= property['number_of_bedrooms']%> Berdrooms, <%= property['number_of_bathrooms']%> Bath, <%= property['number_of_parkings']%> parking</h3>
     <p>It's a beautiful<%= property['property_type']%></p>
     <h4>Rent: <%= property['price']%></h4>
-    <h4>Contact: <%= property['created_by']%></h4>
-    <h4>Ph:<%= property['agent_contact']%></h4>
-    </div>
+
+    <a href="/properties/<%= property['id']%>/update">EDIT</a>
+
+    <form class="delete-property" action="/properties/<%= property['id']%>" method = "POST">
+        <input type="hidden" name = "_method" value = "delete">
+
+        <button>Remove</button>
+    </form>
+  
 
 <% end %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div style="width:200px;height:200px;background-color:red;margin:50px;"></div>
-<a href="/properties/update">EDIT</a>
-<form action="">
-    <button>Remove</button>
-</form>
-<div style="width:200px;height:200px;background-color:red;margin:50px;"></div>
 
 
 
