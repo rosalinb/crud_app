@@ -8,10 +8,20 @@
 <h2>Join Us!</h2>
 <form class="signup-form" action="/create_user" method="POST">
     <div>
-        <input type="text" value="email" placeholder="Email address">
+        <input type="text" name="name" placeholder="Name">
     </div>
     <div>
-        <input type="text" value="password" placeholder="Password">
+        <input type="text" name="email" placeholder="Email address">
+    </div>
+    <div>
+        <input type="text" name="password" placeholder="Password">
+    </div>
+    <div>
+        <label for="user_type">Are you joining as an agent?</label>
+        <select name="user_type" id="user_type">
+            <option value="agent">YES</option>
+            <option value="customer">NO</option>
+        </select>
     </div>
     <button>Create account</button>
 </form>
