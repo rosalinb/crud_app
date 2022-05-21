@@ -1,13 +1,25 @@
-<h1>Welcome <%= current_user['name']%></h1>
+<div class="agent-dashboard-page-wrapper">
 
-<form action="/login_sessions" method="POST">
-    <input type="hidden" name="_method" value="delete">
-    <button>Logout</button>
-</form>
+<section class="user-details">  
+    <div>
+        <img class="user-image" src="<%= current_user['user_image']%>" alt="">
+        <h1>Welcome <%= current_user['name']%></h1>
+        <h2><i class="fa fa-phone"></i>  <%= current_user['user_contact_info']%></h2>
+    </div>
 
-<div><a href="/">HOME</a></div>
+    <div>
+     
+        <form action="/login_sessions" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <button class="link-button"><span>Logout</span></button>
+        </form>
+    </div>
 
-<div><a href="/properties/create">ADD NEW PROPERTY</a></div>
+</section>
+    <a class="link-button" href="/"><i class="fa fa-home"></i> HOME</a>
+    <a class="link-button" href="/properties/create">ADD NEW PROPERTY</a>
+    
+
 
 <% my_property_listings.each do |property| %>
     <div>
@@ -32,5 +44,5 @@
 
 <% end %>
 
-
+</div>
 

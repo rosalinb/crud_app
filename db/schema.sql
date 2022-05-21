@@ -10,6 +10,14 @@ id SERIAL PRIMARY KEY,
     user_type TEXT
 );
 
+ALTER TABLE users
+ADD user_image TEXT;
+
+ALTER TABLE users
+ADD user_contact_info TEXT;
+
+
+
 CREATE TABLE properties(
     id SERIAL PRIMARY KEY,
     image_url TEXT,

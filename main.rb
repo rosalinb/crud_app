@@ -17,6 +17,7 @@ require './db/db'
 
 require './models/user'
 require './models/properties'
+require './models/home'
 
 require './helpers/sessions_helper'
 

@@ -14,9 +14,11 @@ post '/login_sessions' do
         if session['user_type'] == 'agent'
         redirect '/properties/agent_dashboard'
         else
-        redirect '/'
+        redirect '/properties/customer_dashboard'
         end  
-        redirect '/'
+        # redirect '/'
+    else
+        redirect '/sign_up'
     end
 
 end

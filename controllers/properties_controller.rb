@@ -15,6 +15,14 @@ get '/properties/agent_dashboard' do
   }
 end
 
+get '/properties/customer_dashboard' do
+
+  erb :'/properties/customer_dashboard'
+
+end
+
+
+
 get '/properties/create' do
   erb :'/properties/create'
 end

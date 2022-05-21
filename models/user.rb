@@ -1,6 +1,6 @@
-def create_user(name, email, password, user_type)
+def create_user(name, email, password, user_type, user_image, user_contact_info)
     password_digest = BCrypt::Password.create(password)
-    run_sql("INSERT INTO users(name, email, password_digest, user_type) VALUES($1, $2, $3, $4)",[name, email, password_digest, user_type])
+    run_sql("INSERT INTO users(name, email, password_digest, user_type, user_image, user_contact_info) VALUES($1, $2, $3, $4, $5, $6)",[name, email, password_digest, user_type, user_image, user_contact_info])
 end
 
 def find_user_by_email(email)

@@ -8,6 +8,9 @@
 <h2>Join Us!</h2>
 <form class="signup-form" action="/create_user" method="POST">
     <div>
+        <input  type="text" name="user_image" placeholder="Add profile photo ">
+    </div>
+    <div>
         <input type="text" name="name" placeholder="Name">
     </div>
     <div>
@@ -23,7 +26,10 @@
             <option value="customer">NO</option>
         </select>
     </div>
-    <button>Create account</button>
+      <div>
+        <input type="tel" name="user_contact_info" placeholder="Contact number">
+    </div>
+    <button class="button"><span>Create account</span></button>
 </form>
 
 <p>Already have an account with us?<span><a href="/login">Sign in</a></span></p>
