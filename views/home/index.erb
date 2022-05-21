@@ -1,6 +1,8 @@
 <h1>Introducing the new PropertyFinder</h1>
 <h2>Find the suitable properties to call it your Home</h2>
 
+<%# <img class="hero-image" src="https://guardian.ng/wp-content/uploads/2017/04/Tips-for-Real-Estate-Content.jpg" alt=""> %>
+
 <%if logged_in? %>
     <h2>Welcome <%= current_user['name'] %></h2>
 <% end %>
@@ -19,7 +21,6 @@
             <% else %>
                 <li><a href="/sign_up">Sign up</li></a>
                 <li><a href="/login">Log in</li></a>
-                <%# <li><a href="/agent_dashboard">Agent's Dashboard</a></li> %>
             <% end %>
         <li>Help</li>
         </ul>
@@ -27,11 +28,10 @@
 </header>
 
 <div>
-<form action="/properties/listings">
-    <label for="property_search">Search for your dream property</label>
-    <input type="text" name="property_search">
-    <button type="button">Filter</button>
-    <button>Search</button>
-</form>
+    <form action="/properties/search" method='post'>
+        <label for="search_text">Search for your dream property</label>
+        <input type="text" name="search_text">
+        <button>Search</button>
+    </form>
 </div>
 
