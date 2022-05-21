@@ -1,25 +1,29 @@
 
-<h2>Real Estate & Property in NSW 2138</h2>
-<button>Filter</button>
-<a href="/">HOME</a>
+<h2>All the available Real Estates & Properties</h2>
+<%# <button>Filter</button> %>
+<a class="link-button" href="/"><i class="fa fa-home"></i> HOME</a>
 
+<article class="property-detail-wrapper">
+    <% property_listings.each do |property| %>
+    <section class="property-detail-card">
+    
+        <img src="<%= property['image_url']%>" alt="" >
+    
 
-<% property_listings.each do |property| %>
-    <div>
-    <img src="<%= property['image_url']%>" alt="" >
-    </div>
+       
+        <h2><%= property['ad_line']%></h2>
 
-    <div>
-    <h2><%= property['ad_line']%></h2>
-    <h3><%= property['house_number']%>  <%= property['street_name']%>,<%= property['city']%>,<%= property['state']%>, <%= property['postcode']%></h3>
-    <h3><%= property['number_of_bedrooms']%> Berdrooms, <%= property['number_of_bathrooms']%> Bath, <%= property['number_of_parkings']%> parking</h3>
-    <p>It's a beautiful<%= property['property_type']%></p>
-    <h4>Rent: <%= property['price']%></h4>
-  
- 
+        <h3><%= property['house_number']%>, <%= property['street_name']%>, <%= property['suburb']%>, <%= property['state']%>  <%= property['postcode']%></h3>
 
-<% end %>
+        
+        <h3><%= property['number_of_bedrooms']%> <i class="fa fa-hotel"></i>  <%= property['number_of_bathrooms']%> <i class="fa fa-bath"></i> <%= property['number_of_parkings']%> <i class="fa fa-car"></i></h3>
 
+        <h3><%= property['property_type']%></h3>
+        <h4>Rent: <%= property['price']%></h4>
+      </section>
+
+    <% end %>
+</article>
 <%# <div style="width:200px;height:200px;background-color:red;margin:50px;"></div>
 <div style="width:200px;height:200px;background-color:red;margin:50px;"></div> %>
 

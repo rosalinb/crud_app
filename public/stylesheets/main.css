@@ -4,7 +4,6 @@ body{
 }
 
 .link-button {
-
     padding: 15px 25px;
     font-size: 24px;
     text-align: center;
@@ -37,25 +36,24 @@ body{
     display: inline-block;
     position: relative;
     transition: 0.5s;
-  }
-  
-  .button span:after {
+} 
+.button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
-  }
-  
-  .button:hover span {
+}
+ 
+.button:hover span {
     padding-right: 25px;
-  }
-  
-  .button:hover span:after {
+}
+
+.button:hover span:after {
     opacity: 1;
     right: 0;
-  }
+}
 
 
 .home_page_header {    
@@ -72,6 +70,13 @@ body{
 .home_page_header ul li {
     list-style: none;
 }
+
+.search-text-box input {
+    padding: 20px 20px;
+    width: 500px;  
+    font-size: 20px; 
+}
+
 
 .login-page-section, .signup-page-section {
     text-align: center;
@@ -100,11 +105,8 @@ body{
     object-position: center center;
 } */
 .agent-dashboard-page-wrapper .user-details {
-
 display: flex;
 justify-content: space-between;
-
-
 
 }
 .user-image {
@@ -113,4 +115,25 @@ justify-content: space-between;
     height: 150px;
     border-radius: 50%;
     background-color: aquamarine;
+}
+.property-detail-wrapper {
+    display: flex;
+}
+
+.property-detail-card {
+    border: 10px dotted red;
+    margin: 20px;
+ 
+   
+}
+
+
+.update-delete-link-container{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.property-detail-card img {
+    width: 300px;
 }
