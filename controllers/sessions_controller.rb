@@ -26,5 +26,13 @@ end
 delete '/login_sessions' do
     session['user_id']  = nil 
     session['user_type'] = nil
+
+    redirect '/'
+end
+
+get '/signout' do
+    session['user_id']  = nil 
+    session['user_type'] = nil
+    
     redirect '/'
 end

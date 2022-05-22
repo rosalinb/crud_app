@@ -1,19 +1,45 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>PropertyFinder</title></title>
-  <link rel='stylesheet' href='/stylesheets/main.css'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<%# <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> %>
+  <head>
+    <meta charset="UTF-8">
+    <title>PropertyFinder</title></title>
+    <link rel='stylesheet' href='/stylesheets/main.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
 
+  <body>
+    <div class="page-wrapper">
+      <header class="nav-bar">
+        <h2><a href="/">PropertyFinder</a> </h2>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
 
-</head>
-<body>
+                <%if logged_in? && current_user['user_type'] == 'agent' %>
+                  <li><a  href="/properties/agent_dashboard">Dashboard</a></li>
+                <% end %>
 
-  <%= yield %>
+                <%if logged_in? %>
+                    <li><a  href="/signout">Sign out</a></li>
 
-</body>
+                <% else %>
+                  <li><a  href="/sign_up">Join</a></li>
+                  <li><a  href="/login">Sign in</a></li>
+                <% end %>
+
+               
+
+                <li> <a href="/help_center">Help</a></li>
+            </ul>
+        </nav>
+      </header>
+
+      <%# main contennt %>
+      <%= yield %>
+
+    </div>
+
+  </body> 
 </html>

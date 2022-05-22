@@ -7,28 +7,23 @@
         <h2><i class="fa fa-phone"></i>  <%= current_user['user_contact_info']%></h2>
     </div>
 
-    <div>
-        <form action="/login_sessions" method="POST">
-            <input type="hidden" name="_method" value="delete">
-            <button class="link-button"><span>Logout</span></button>
-        </form>
-    </div>
+        <a class="link-button" href="/properties/create">Add Property</a>
 </section>
 
-<div>
-    <a class="link-button" href="/"><i class="fa fa-home"></i> HOME</a>
-    <a class="link-button" href="/properties/create">ADD NEW PROPERTY</a>
-</div>   
+
 
 <article class="property-detail-wrapper">
     <% my_property_listings.each do |property| %>
     <section class="property-detail-card">
     <div class="update-delete-link-container">
-        <a href="/properties/<%= property['id']%>/update"><i class="fa fa-edit"></i>EDIT</a>
+            <a href="/properties/<%= property['id']%>/update">
+                <i class="fa fa-edit" style="font-size: 26px; color: #AE0F54"></i>
+            </a>
 
             <form class="delete-property" action="/properties/<%= property['id']%>" method = "POST">
                 <input type="hidden" name = "_method" value = "delete">
-                <button>Remove</button>
+                <button style="border: none;outline: none;background:transparent;cursor: pointer;">                <i class="fa fa-trash-o" style="font-size: 26px; color: #AE0F54"></i>
+                </button>
             </form>
         </div>
 

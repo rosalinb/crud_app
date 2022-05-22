@@ -52,6 +52,7 @@ end
 get '/properties/:id/update' do
   id = params['id']
   property_to_edit = get_property(id)
+  
   erb :'/properties/update', locals: {
     property: property_to_edit
   }

@@ -1,7 +1,6 @@
 
-<h2>All the available Real Estates & Properties</h2>
-<%# <button>Filter</button> %>
-<a class="link-button" href="/"><i class="fa fa-home"></i> HOME</a>
+<h2>All available properties</h2>
+
 
 <article class="property-detail-wrapper">
     <% property_listings.each do |property| %>
@@ -9,8 +8,6 @@
     
         <img src="<%= property['image_url']%>" alt="" >
     
-
-       
         <h2><%= property['ad_line']%></h2>
 
         <h3><%= property['house_number']%>, <%= property['street_name']%>, <%= property['suburb']%>, <%= property['state']%>  <%= property['postcode']%></h3>

@@ -1,11 +1,12 @@
 
-<h1>Hi! AGENTNAME</h1>
+<h1>Hi <%= current_user['name']%></h1>
 <%# <a href="/properties/agent_dashboard'">Return to my Dashboard</a> %>
 <%# <div><a href="/logout">logout</a></div> %>
 
 <h2>Add details of the property to add it to your list </h2>
 <section>
-    <form class="add-new-property-form" action="/create_properties" method = "POST">
+    <form action="/create_properties" method = "POST">
+     <div class="property-form-content">
         <input type="text" name="image_url" placeholder="Add an image of the property">
         <input type="text" name="ad_line" placeholder="Advertise Title">
         <input type="text" name="house_number" placeholder="House number">
@@ -20,7 +21,7 @@
         <input type="text" name="price" placeholder="Price per week or month in AUD">
        
 
-
-        <button>Add property</button>
+</div>
+        <button class="button">Add Property</button>
     </form>
 </section>
