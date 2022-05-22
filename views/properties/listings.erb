@@ -13,7 +13,10 @@
         <h3><%= property['house_number']%>, <%= property['street_name']%>, <%= property['suburb']%>, <%= property['state']%>  <%= property['postcode']%></h3>
 
         
-        <h3><%= property['number_of_bedrooms']%> <i class="fa fa-hotel"></i>  <%= property['number_of_bathrooms']%> <i class="fa fa-bath"></i> <%= property['number_of_parkings']%> <i class="fa fa-car"></i></h3>
+        <h3>
+          <%= property['number_of_bedrooms']%> <i class="fa fa-hotel" style="color: #AE0F54"></i>&nbsp;&nbsp;&nbsp;<%= property['number_of_bathrooms']%> <i class="fa fa-bath" style="color: #AE0F54"></i>&nbsp;&nbsp;&nbsp;     
+          <%= property['number_of_parkings']%> <i class="fa fa-car" style="color: #AE0F54"></i>
+        </h3>
 
         <h3><%= property['property_type']%></h3>
         <h4>Rent: <%= property['price']%></h4>
