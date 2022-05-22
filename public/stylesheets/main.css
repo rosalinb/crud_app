@@ -1,7 +1,8 @@
 body{
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    color: #840056;
+    /* color: #840056; */
+    color:#4e0434e5;
 }
 
 .link-button {
@@ -72,6 +73,11 @@ body{
     padding: 0px 30px;
     margin-bottom: 20px;
 }
+/* @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+   
+  } */
+
 
 
 
@@ -193,5 +199,26 @@ body{
 input {
     padding: 10px 15px;
     width: 250px;
+}
+
+.help-page-wrapper section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.help-page-wrapper section div {
+    display: flex;
+    flex-direction: column;
+}
+
+.help-page-wrapper section li a {
+    text-decoration: none;
+    font-size: 20px;
+    color:#9B0A49;
+}
+
+.help-page-wrapper section p  {
+    margin: 0;
 }
 

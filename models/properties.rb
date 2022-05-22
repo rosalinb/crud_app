@@ -25,3 +25,5 @@ end
 def delete_property(id)
     run_sql("DELETE FROM properties WHERE id = $1", [id])
 end
+
+
