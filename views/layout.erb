@@ -17,18 +17,24 @@
             <ul>
                 <li><a href="/">Home</a></li>
 
-                <%if logged_in? && current_user['user_type'] == 'agent' %>
-                  <li><a  href="/properties/agent_dashboard">Dashboard</a></li>
-                <% end %>
+        
 
                 <%if logged_in? %>
-                    <li><a  href="/signout">Sign out</a></li>
+                 <%if current_user['user_type'] == 'agent' %>
+                  <li><a  href="/properties/agent_dashboard">Dashboard</a></li>
+
+                <% else %> 
+                  <li><a  href="/properties/customer_dashboard">Dashboard</a></li>
+                <% end %>
+
+                <li><a  href="/signout">Sign out</a></li>
 
                 <% else %>
                   <li><a  href="/sign_up">Join</a></li>
                   <li><a  href="/login">Sign in</a></li>
                 <% end %>
 
+             
                
 
                 <li> <a href="/help_center">Help</a></li>
