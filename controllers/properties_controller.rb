@@ -99,6 +99,7 @@ delete '/properties/:id' do
       erb :'/properties/listings', locals: {
         property_listings: property_listings
       }
+    
     else 
       erb :'/properties/listings', locals: {
         property_listings: search_result

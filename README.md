@@ -18,5 +18,8 @@
 
 <h2>Extra Functionalities</h2>
 <ol>
+    <li>Add an error msg if search property is not found</li>
+    <li>Add edit and remove to update the users info in their dashboard.</li>
     <li>Allows tenants to mark a property as favourite.</li>
+    <li>Add contact info of the agents  in the Help page.</li>
 </ol>
